@@ -1,0 +1,176 @@
+
+
+/* общие стили */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+}
+
+.display-1,
+.display-2,
+.display-3 {
+  display: none;
+}
+
+.display-1.active,
+.display-2.active,
+.display-3.active {
+  display: block;
+}
+
+/* экран 1 */
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+}
+.start-container {
+  padding: 100px;
+  background: #2b2929;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.hello-text {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  color: #2c5735;
+}
+
+.choice_mode {
+  display: block;
+  width: fit-content;
+  margin: 9px auto;
+  padding: 12px 16px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.choice_mode:hover {
+  background-color: #d6d6d6;
+}
+
+/*экран 2 */
+
+.cryptoprimitives-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+    margin: 0, auto;
+}
+
+.item {
+  background-color: #2c2c2c;
+  color: white;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.8s ease;
+
+}
+
+.item:hover {
+  background-color: #474747;
+  transform: scale(1.03);
+}
+
+
+/* экран 3 */
+
+.display-3 {
+    position: relative;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    color: green;
+}
+
+.display-3 h2{
+    color: #266e14;
+}
+
+.text-crypto-primitive {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-text {
+    width: 600px;
+    font-size: 25px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px #3e3f40;
+    padding: 20px;
+    margin: 25px;
+}
+
+#key-section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 25px
+}
+
+.key_here {
+    font-size: 32px;
+    color: green;
+}
+
+#input-key {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 12px;
+}
+
+.action-btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
+.copy-button {
+    padding: 4px;
+    margin-top: 10px;
+    color: white;
+    background-color: green;
+    cursor: pointer;
+}
+
+.back-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 10;
+  padding: 6px 12px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.result, .get-key {
+    color: green;
+}

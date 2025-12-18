@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Криптопримитивы</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<script>
+    const url = "{% url 'main' %}";
+</script>
+<body>
+<section class="display-1 active">
+    <div class="page-center">
+        <div class="start-container">
+            <div class="hello-container">
+                <h2 class="hello-text">
+                    Шифры и прочие криптографические примитивы ждут вас здесь<br>
+                    Какое действие вы хотите совершить сейчас?
+                </h2>
+                <a href="/" class="choice_mode" data-mode="Засекретить">Засекретить сообщение</a>
+                <a href="/" class="choice_mode" data-mode="Рассекретить">Рассекретить сообщение</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="display-2">
+    <div class="cryptoprimitives-container">
+        <div class="item" data-name-item="chacha20">
+            <h2>ChaCha20</h2>
+        </div>
+        <div class="item" data-name-item="sha256">
+            <h2>SHA256</h2>
+        </div>
+        <div class="item" data-name-item="aes_gcm">
+            <h2>AES-GCM</h2>
+        </div>
+        <div class="item" data-name-item="rot13">
+            <h2>ROT13</h2>
+        </div>
+        <div class="item" data-name-item="sha3">
+            <h2>SHA3-256</h2>
+        </div>
+        <div class="item" data-name-item="md5">
+            <h2>MD5</h2>
+        </div>
+        <div class="item" data-name-item="hmac">
+            <h2>HMAC-SHA256</h2>
+        </div>
+        <div class="item" data-name-item="base32">
+            <h2>Base32</h2>
+        </div>
+        <div class="item" data-name-item="base64">
+            <h2>Base64</h2>
+        </div>
+    </div>
+</section>
+
+<section class="display-3">
+    <div class="name-crypto-primitive">
+        <h1 class="name"></h1>
+    </div>
+
+    <div class="type-crypto-primitive">
+        <h2 class="type-cipher"></h2>
+    </div>
+
+    <div class="description-crypto-primitive">
+        <h2 class="description"></h2>
+    </div>
+
+    <div class="meta-crypto-primitive">
+        <h2 class="meta-text"></h2>
+    </div>
+
+    <div class="key-place-crypto-primitive">
+        <h2 class="key-place"></h2>
+    </div>
+
+    <div class="reversible-crypto-primitive">
+        <h2 class="reversible"></h2>
+    </div>
+
+    <div class="is-broken-crypto-primitive">
+        <h2 class="is-broken"></h2>
+    </div>
+
+    <div class="text-crypto-primitive">
+        <label for="input-data"></label>
+        <textarea id="input-data" class="input-text" rows="4" placeholder="Ваш текст будет тут"></textarea>
+    </div>
+
+    <div id="key-section" style="display: none;">
+        <h2 class="key_here">Сюда нужно вставить ключ</h2>
+        <label for="input-key"></label>
+        <input autocomplete="off" type="password" id="input-key" placeholder="Ключ тут">
+    </div>
+
+    <button type="button" class="action-btn">Обработать</button>
+
+    <div class="result-container" style="display: none">
+        <h2>Ваш результат тут: </h2>
+        <p class="result"></p>
+        <p class="get-key" style="display: none"></p>
+        <button type="button" class="copy-button">Копировать текст</button>
+    </div>
+
+    <button type="button" class="back-btn">Вернуться</button>
+</section>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
